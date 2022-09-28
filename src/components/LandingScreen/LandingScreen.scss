@@ -1,0 +1,109 @@
+.landing-screen-container {
+    @include flex-value(1);
+    color: white;
+    background-size: cover;
+    background-position: center;
+    border-radius: $border-radius-container;
+    background-image: linear-gradient(to bottom, #f9faff, #d2dce6);
+    overflow: hidden;
+    // padding: 20px 22px;
+    border-radius: 8px;
+    min-height: 563px;
+
+    // @include flex-justify-direction(space-between, column);
+    @include media-width-max(456) {
+        border-radius: 0;
+    }
+    @include media-height-max(455) {
+        border-radius: 0;
+        padding-bottom: 6rem;
+    }
+    .bottom-section {
+        padding: 20px 22px;
+    }
+    .languageButtons {
+        border-radius: 12px;
+        width: 164px;
+        height: 97px;
+        button {
+            font-family: Lato-Regular;
+            font-size: 14px;
+            color: #354f94;
+            text-align: left;
+            // display: flex;
+            align-items: center;
+            max-width: 300px;
+            width: 100%;
+            height: 56px;
+            // @include justify-align(center, center);
+            // margin-bottom: 8px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 17px 16px;
+            &:nth-last-child(n-1) {
+                border-bottom: 0.8px solid #dae9ff;
+            }
+            &:first-child {
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            &:last-child {
+                font-family: 'Tajawal-Medium';
+                letter-spacing: 0.14px;
+                font-weight: 500;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        }
+    }
+}
+
+.negative-margin {
+    margin: 0 -20px -16px;
+}
+
+.powered-by {
+    width: 85% !important;
+    z-index: 1;
+    position: absolute;
+    bottom: 1px;
+    right: 26px;
+    width: 101px;
+    bottom: 10px;
+    &.right-align {
+        left: 26px;
+        right: unset;
+        bottom: 10px;
+    }
+    img {
+        // width: 100%;
+        width: auto;
+        position: relative;
+        display: block;
+        margin: auto;
+    }
+    .slider {
+        background-image: url('../../public/images/Rectangle 163.png');
+        width: 344px;
+        height: 163px;
+    }
+}
+.selectLanguage {
+    width: 243px;
+    // height: 66px;
+    margin-bottom: 8px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    p {
+        font-family: 'Lato-Regular';
+        font-size: 13px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: 0.13px;
+        text-align: left;
+        color: #333;
+    }
+}

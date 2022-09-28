@@ -1,0 +1,56 @@
+.autosuggest-container {
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: $border-top-left;
+
+  h1 {
+    color: $font-color-3;
+    font-size: 14px;
+  }
+
+  .input-section {
+    @include flex-align(center);
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  input {
+    @include flex-value(1);
+    padding: 10px;
+    font-family: "G-Regular";
+    color: black;
+    font-size: 14px;
+  }
+
+  button {
+    @include justify-align(center, center);
+    margin-right: 10px;
+    background-color: transparent;
+  }
+
+  .circle-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .suggestion-list {
+    margin-top: 10px;
+    border-radius: $border-radius-12;
+    background-color: white;
+    overflow: hidden;
+    height: 200px;
+    overflow-y: scroll;
+    div {
+      text-align: left;
+      padding: 15px;
+      font-family: "G-Regular";
+      font-size: 14px;
+      @include transition(0.3s ease-in-out);
+      &:hover {
+        background-color: $bg-color-1;
+        color: white;
+      }
+    }
+  }
+}

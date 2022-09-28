@@ -1,0 +1,26 @@
+{
+    "short_name": "Lexus",
+    "name": "Lexus",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "logo192.jpg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "logo192.jpg",
+            "type": "image/jpg",
+            "sizes": "192x192"
+        },
+        {
+            "src": "logo512.jpg",
+            "type": "image/jpg",
+            "sizes": "512x512"
+        }
+    ]
+}

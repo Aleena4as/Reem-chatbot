@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./icomoon.eot?n4qh4b');
+  src:  url('./icomoon.eot?n4qh4b#iefix') format('embedded-opentype'),
+    url('./icomoon.ttf?n4qh4b') format('truetype'),
+    url('./icomoon.woff?n4qh4b') format('woff'),
+    url('./icomoon.svg?n4qh4b#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 23px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book-service:before {
+  content: "\e905";
+}
+.icon-Feedback:before {
+  content: "\e903";
+}
+.icon-Book-test_drive:before {
+  content: "\e904";
+}
+.icon-experience-lexus:before {
+  content: "\e900";
+}
+.icon-locate-a-center:before {
+  content: "\e901";
+}
+.icon-explore-offer:before {
+  content: "\e902";
+}

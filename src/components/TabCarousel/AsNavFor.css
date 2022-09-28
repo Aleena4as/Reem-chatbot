@@ -1,0 +1,96 @@
+.tabCarousal .SliderTitle {
+  font-family: Nobel-Regular;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.54px;
+  text-align: left;
+  color: #000000;
+}
+
+.tabCarousal .tabSlider {
+  width: 320px !important;
+}
+
+.tabCarousal .tabSlider .features-list {
+  font-family: Nobel-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: 0.42px;
+  text-align: left;
+  color: #333333;
+}
+
+.tabCarousal .tabSlider .features-list.right-align {
+  direction: rtl;
+}
+
+.tabCarousal .slick-dots {
+  left: 0 !important;
+}
+
+.tabCarousal .slick-list {
+  padding-left: 0px !important;
+}
+
+.tabCarousal .slide-wrap {
+  width: 141px !important;
+  height: 193px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f4f5f5;
+  margin-left: 0;
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tabCarousal .slide-wrap .tabSliderBox {
+  width: 100%;
+  height: 100%;
+}
+
+.tabCarousal .slide-wrap .tabSliderBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.tabCarousal .slide-wrap .tabSliderBox .image {
+  width: 103%;
+  height: 100px;
+  margin: auto;
+  margin-top: 28px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tabCarousal .slide-wrap .tabSliderBox .features {
+  width: 108px;
+  background-color: transparent;
+  color: #333333;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  letter-spacing: 0.32px;
+}
+
+.tabCarousal .slide-wrap .tabSliderBox .features p {
+  font-family: Nobel-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-align: center;
+  color: #ffffff;
+}
+/*# sourceMappingURL=AsNavFor.css.map */

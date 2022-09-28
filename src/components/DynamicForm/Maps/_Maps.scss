@@ -1,0 +1,69 @@
+.maps-container {
+  .header-section {
+    @include position-zero();
+    width: 100%;
+    padding-top: 0;
+  }
+  .footer {
+    padding: 22px 24px;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    min-height: 110px;
+    @include flex();
+    flex-direction: column;
+    @include position(absolute, left, 0, bottom, 0);
+    right: 0;
+    .left-section {
+      @include flex-value(1);
+      padding-bottom: 12px;
+      h1 {
+        font-family: "G-SemiBold";
+        font-size: 16px;
+        letter-spacing: 0.16px;
+      }
+      p {
+        font-family: "G-Regular";
+        font-size: 14px;
+        margin-top: 0;
+        line-height: 20px;
+        letter-spacing: 0.14px;
+      }
+    }
+    .right-section {
+      padding-top: 0;
+      @include flex-justify-direction(space-between, row);
+      @include flex-align(center);
+      a {
+        margin-right: 15px;
+      }
+      a,
+      button {
+        font-family: "G-Medium";
+        font-size: 14px;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        flex: 1;
+        img {
+          margin-right: 5px;
+          width: 11px;
+        }
+      }
+      button {
+        background-color: #fff;
+        color: $bg-color-1;
+        border: 1px solid $bg-color-1;
+        img {
+          width: 12px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+
+.maps {
+  pointer-events: all;
+}

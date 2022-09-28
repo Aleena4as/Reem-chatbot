@@ -1,0 +1,84 @@
+.quick-buttons-container {
+    margin-bottom: 10px;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    button {
+        letter-spacing: 0.24px;
+        margin-right: 7px;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: #354f94;
+        }
+        &.align-right {
+            padding-right: 26px;
+            padding-left: 16px;
+            &::before {
+                right: 10px;
+                left: unset;
+            }
+        }
+    }
+}
+.timeSlot-container {
+    position: relative;
+    transition: height 1s ease-in-out !important;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 12px;
+    .slotTitle {
+        font-family: $font-Medium;
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: 0.12px;
+        text-align: left;
+        color: #26396a;
+        margin: 0;
+    }
+    .slotsButton {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-radius: 10px;
+        grid-column-gap: 6px;
+        grid-row-gap: 6px;
+        margin-top: 12px;
+        background: #f4f6fc;
+        padding: 15px;
+
+        .slotTitle {
+            font-family: $font-Medium;
+            font-size: 12px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.42;
+            letter-spacing: 0.12px;
+            text-align: left;
+            color: $font-color-basic;
+        }
+        button {
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 12px;
+            color: #666666;
+        }
+        .quick-reply-btn {
+            border: 0.8px solid rgba(53, 86, 146, 0.15);
+        }
+        .linkActive {
+            z-index: 9;
+            cursor: not-allowed;
+            transition: $buttonMoveTransition;
+            will-change: transform;
+            color: white;
+            background-color: $btn-color-2;
+            border: 0;
+        }
+    }
+}

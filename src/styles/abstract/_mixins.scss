@@ -1,0 +1,266 @@
+@mixin desktop() {
+    @media (max-width: 1200px) {
+        transition: 0.5s; /* animate when window resizing */
+        @content;
+    }
+}
+
+@mixin laptops() {
+    @media (max-width: 992px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+@mixin tablets() {
+    @media (max-width: 767px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+@mixin mobiles() {
+    @media (max-width: 457px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+/* Media Query for Max-width */
+@mixin media-width-max($media-width) {
+    @media all and (max-width: #{$media-width}px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+/* Media Query for Min-width */
+@mixin media-width-min($media-width) {
+    @media all and (min-width: #{$media-width}px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+/* Media Query for Min & Max Width */
+@mixin media-width-minmax($media-width-min, $media-width-max) {
+    @media all and (min-width: #{$media-width-min}px) and (max-width: #{$media-width-max}px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+/* Media Query for Max Height */
+@mixin media-height-max($media-height-max) {
+    @media all and (max-height: #{$media-height-max}px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+/* Media Query for Min Height */
+@mixin media-height-min($media-height-min) {
+    @media all and (min-height: #{$media-height-min}px) {
+        transition: 0.5s;
+        @content;
+    }
+}
+
+/*======= Flex Functions and Prefix Start */
+
+@mixin flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-value($value) {
+    -webkit-box-flex: $value;
+    -ms-flex: $value;
+    flex: $value;
+}
+/* Flex - Justify , Align */
+@mixin justify-align($justify, $align) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+}
+
+/*  Flex Justify */
+@mixin flex-justify($justify) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+}
+
+@mixin flex-justify-direction($justify, $direction) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+    -webkit-box-orient: $direction;
+    -webkit-box-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+@mixin flex-align-direction($align, $direction) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+    -webkit-box-orient: $direction;
+    -webkit-box-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+/*  Flex - Align */
+@mixin flex-align($align) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+}
+
+/* Flex Direction */
+
+@mixin flex-direction($direction) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: $direction;
+    -webkit-box-orient: $direction;
+    -webkit-box-direction: $direction;
+    -ms-flex-direction: $direction;
+}
+
+@mixin flex-wrap() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/*======= Flex Functions and Prefix End */
+
+/*======= Position Property Start */
+/* Position Absolute Center */
+@mixin position-center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Position Zero */
+@mixin position-zero() {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Position Zero */
+@mixin position-absolute-zero() {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin position($name, $hor, $horvalue, $ver, $vervalue) {
+    position: $name;
+    #{$hor}: $horvalue;
+    #{$ver}: $vervalue;
+}
+/*======= Position Property End */
+
+/*======== Font Sizes Start */
+
+@mixin font-32() {
+    font-size: 32px;
+    @include desktop() {
+        font-size: 26px;
+    }
+    @include laptops() {
+        font-size: 24px;
+    }
+    @include tablets() {
+        font-size: 16px;
+    }
+    @include mobiles() {
+        font-size: 16px;
+    }
+}
+
+@mixin font-21() {
+    font-size: 21px;
+    @include desktop() {
+        font-size: 20px;
+    }
+    @include laptops() {
+        font-size: 16px;
+    }
+    @include tablets() {
+        font-size: 16px;
+    }
+    @include mobiles() {
+        font-size: 14px;
+    }
+}
+
+/*======== Font Sizes Start End */
+
+/*  Custom Overlay */
+@mixin overlay($color, $opacity) {
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color;
+        opacity: $opacity;
+        z-index: 1;
+    }
+}
+
+/*  Transition */
+@mixin transition($value) {
+    -webkit-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+}
+
+/*  ::before */
+@mixin before() {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+}
+
+@mixin title-text($fontSize: 18px, $fontWeight: $font-Regular) {
+    font-size: $fontSize;
+    color: $font-color-1;
+    font-family: $fontWeight;
+    @content;
+}

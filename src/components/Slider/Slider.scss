@@ -1,0 +1,92 @@
+.top-section {
+    background-image: url('../../public/images/Rectangle 163.png');
+    width: 344px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 455px) {
+        width: 100%;
+    }
+}
+
+.slider-container {
+    a {
+        text-decoration: none;
+    }
+    h3 {
+        // padding: 40px 95px 0;
+        max-width: 200px;
+        margin: 45px auto;
+        text-align: center;
+        // color: black;
+        font-family: $font-Bold;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.16px;
+        text-align: center;
+        color: #fff;
+    }
+    .slider {
+        background-image: url('../../public/images/Rectangle 163.png');
+        height: 163px !important;
+        // width: 100%;
+        // margin: -22px -20px 0 -22px;
+        padding-left: 0;
+        cursor: pointer;
+    }
+    // .slick-track {
+    //     // width: initial !important;
+    // }
+    // .slick-list {
+    //     margin: -22px -20px 0 -22px;
+    //     padding-left: 0;
+    //     height: 163px;
+    //     width: auto;
+    // }
+    .slick-dots {
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        // display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        // display: flex !important;
+        // left: 22px;
+        li {
+            margin-right: 12px;
+            // .active {
+            //     color: #FCB13A;
+            //     background-color: #FCB13A;
+        }
+        button {
+            &::before {
+                background-color: #c4c4c4 !important;
+                font-size: 0;
+                height: 4px;
+                width: 30px;
+            }
+        }
+        &.slick-active {
+            button {
+                &::before {
+                    background-color: $btn-color-2;
+                }
+            }
+        }
+    }
+    .slick-dots li.slick-active button:before {
+        background-color: $btn-color-2 !important;
+    }
+    .slick-slide {
+        // text-align: center;
+    }
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        cursor: pointer;
+    }
+}

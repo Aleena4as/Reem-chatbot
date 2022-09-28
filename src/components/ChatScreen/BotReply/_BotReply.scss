@@ -1,0 +1,19 @@
+.bot-reply-container {
+    text-align: left;
+    .bot-reply {
+        font-family: Lato-Regular;
+        font-size: 13px;
+        line-height: 17px;
+        display: inline-block;
+        background-color: white;
+        color: #333333;
+        border-radius: $border-bottom-left;
+        padding: 16px;
+        margin-bottom: 8px;
+        // font-size: 16px;
+        // font-family: $font-Light;
+        // line-height: 20px;
+        word-break: break-word;
+        white-space: break-spaces;
+    }
+}

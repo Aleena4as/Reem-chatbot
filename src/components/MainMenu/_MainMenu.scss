@@ -1,0 +1,118 @@
+@mixin tooltip() {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: $font-Regular;
+    text-align: center;
+    width: 93px;
+    background: black;
+    padding: 5px 0;
+    z-index: 99;
+    border-radius: 8px;
+    font-size: 12px;
+    box-shadow: 0 1px 6px #3e3e3e26;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(0.3s);
+    @include mobiles() {
+        display: none;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 15px solid black;
+    }
+}
+
+@mixin tooltip-hover {
+    top: -42px;
+    opacity: 1;
+}
+
+.mainmenu-container {
+        margin-bottom: 10px;
+    height: 120px;
+    @include justify-align(center, center);
+    button {
+        font-family: $font-Light;
+        background-color: $bg-color-4;
+        border-radius: 5px;
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+        padding: 16px;
+        width: auto !important;
+    }
+
+    .btn-2,
+    .btn-1,
+    .btn-3 {
+        &:hover {
+            .circle-btn span {
+                max-width: 7rem;
+            }
+        }
+        .circle-btn {
+            span {
+                max-width: 0;
+                -webkit-transition: max-width 1s;
+                transition: max-width 1s;
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .btn-1,
+    .btn-3 {
+        button {
+            color: black;
+        }
+    }
+    .btn-3 {
+        button {
+            font-weight: bold;
+            color: black;
+        }
+    }
+
+    [class*="btn-"] {
+        .tooltip {
+            @include tooltip();
+        }
+        &:hover {
+            .tooltip {
+                @include tooltip-hover;
+            }
+        }
+    }
+
+    .btn-2 {
+        button {
+            background-color: black;
+            width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 12px;
+        }
+    }
+
+}
+
+    .powered-by  img{
+            display: block;
+    position: relative;
+    top: -2px;
+    }

@@ -1,0 +1,11 @@
+.date-placeholder::after {
+    content: "";
+    background-image: url("./calendar.svg");
+    position: absolute;
+    right: 10px;
+    top: 54%;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 20px;
+    background-repeat: no-repeat;
+}

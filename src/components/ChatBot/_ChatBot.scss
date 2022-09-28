@@ -1,0 +1,77 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.chatbot-container {
+    position: relative;
+    height: 100%;
+    background: transparent;
+    width: 344px;
+    .chat-curve {
+        @include position(absolute, right, 90px, bottom, 139px); //Local
+        // @include position(absolute, right, 81.51px, bottom, 147px); //Deployed
+        z-index: 1;
+        @include mobiles() {
+            @include position(absolute, right, 10px, bottom, 139px);
+        }
+        @include media-height-max(769) {
+            bottom: 4px;
+        }
+        @include media-height-max(620) {
+            display: none;
+        }
+        @include media-width-max(455) {
+            display: none;
+        }
+    }
+    .screen-holder {
+        // width: 344px;
+        height: 563px;
+        background-color: white;
+        border-radius: 25px;
+        // overflow: hidden;
+        z-index: 9;
+        box-shadow: 0 4px 50px 0 rgba(54, 54, 54, 0.07);
+        @include flex-justify-direction(space-between, column);
+        @include position(fixed, right, 21px, bottom, 80px);
+        @include media-width-max(455) {
+            width: 100%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            border-radius: 0;
+        }
+        @include media-height-max(620) {
+            top: 0;
+        }
+        @include media-height-max(769) {
+            bottom: 35px;
+        }
+        #minimise {
+            z-index: 99999;
+            cursor: pointer;
+            @include position(absolute, left, -30px, top, 0);
+            @include mobiles() {
+                @include position(absolute, left, 28px, top, 0);
+            }
+            @include media-height-min(769) {
+                // display: none;
+            }
+            @include media-width-max(456) {
+                display: block;
+            }
+            .closeChat {
+                width: 27px;
+                position: absolute;
+                top: 8px;
+                left: -28px;
+                padding: 10px 17px 14px 13px;
+                background-color: $btn-color-2;
+                border-radius: 10px;
+                z-index: -1;
+            }
+            .topAvatar {
+                width: 59px;
+                height: 56px;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.chatscreen-container {
+    @include flex-justify-direction(space-between, column);
+    border-radius: 8px;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 8px;
+    background-image: linear-gradient(to bottom, #f9faff, #d2dce6);
+    max-height: 563px;
+    height: 563px;
+    max-width: 344px;
+    width: 344px;
+    // height: 563px;
+    @include mobiles() {
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+    .back-arrow {
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+    }
+    //==== Header Section
+    .header-section {
+        color: white;
+        width: 344px;
+        background-color: #26396a;
+        font-family: $font-Medium;
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: 0.14px;
+        text-align: left;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        padding-left: 42px;
+        position: relative;
+        .avatarName {
+            @include mobiles() {
+                padding-left: 55px;
+            }
+        }
+        .leaveAgentButton {
+            display: flex;
+            cursor: pointer;
+            position: absolute;
+            right: 80px;
+            img {
+                padding-right: 8px;
+            }
+            p {
+                font-family: $font-HelveticaNeueLight;
+                font-size: 10px;
+                font-weight: 300;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.2px;
+                text-align: left;
+                color: #fff;
+            }
+        }
+    }
+    //==== Header Section End
+    /*==== Chat Section*/
+    .chat-section {
+        padding: 25px;
+        height: calc(100% - 25%);
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        // padding-bottom: 30px;
+    }
+    /*==== Chat Section End*/
+}

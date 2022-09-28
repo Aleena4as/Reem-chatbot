@@ -1,0 +1,19 @@
+.gender-container {
+  padding: 8px 16px 12px 16px;
+  border-radius: $border-top-left;
+  h1 {
+    font-family: "G-Regular";
+    font-weight: normal;
+    color: $font-color-3;
+    font-size: 14px;
+  }
+  select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ededed;
+    option {
+      font-size: 14px;
+      font-family: "G-Medium";
+    }
+  }
+}

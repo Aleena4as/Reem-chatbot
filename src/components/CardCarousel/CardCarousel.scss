@@ -1,0 +1,164 @@
+.cardCarousel-container {
+    // margin: 0 -25px;
+    // padding-left: 15px;
+    width: 85%;
+    .figure {
+        // width: auto !important;
+        // width: 199px !important;
+        // // height: 185px;
+        // height: 215px;
+        // overflow: hidden;
+        // border-radius: 4.4px;
+        background-color: $bg-color-4;
+        margin-bottom: 25px;
+        border-radius: 16px;
+        // margin-left: 0;
+        // margin-right: 25px;
+        // margin-right: 13px;
+        // position: relative;
+        cursor: pointer;
+        &.book-figure {
+            min-height: 353px;
+        }
+        &.two-button-height {
+            height: 237px;
+        }
+        &:hover {
+            // box-shadow: 0 0 0 1px black !important;
+        }
+        &.disabled-button {
+            opacity: 1 !important;
+            cursor: not-allowed;
+            &:hover {
+                border: none;
+            }
+        }
+        &.selected-button {
+            box-shadow: 0 0 0 1px black !important;
+            cursor: not-allowed;
+        }
+        &.newClass {
+            margin-left: -12px;
+        }
+        .containerImg {
+            width: 100%;
+            min-height: 145px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+        .details {
+            width: calc(100% - 38px);
+            padding: 14px 16px;
+            background-color: transparent;
+            color: $font-color-1;
+            text-align: left;
+            // -webkit-transform: translateX(-50%);
+            // -ms-transform: translateX(-50%);
+            // transform: translateX(-50%);
+            // @include position(absolute, bottom, -8px, left, 50%);
+            letter-spacing: 0.32px;
+            padding-bottom: 22px;
+            h1 {
+                font-family: $font-Bold;
+                font-size: 16px;
+                text-transform: capitalize;
+            }
+            h2 {
+                font-family: $font-Regular;
+                font-size: 16px;
+                margin: 0;
+                font-weight: normal;
+
+                &.book-h-title {
+                    margin-bottom: 10px;
+                    font-family: $font-Semibold;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.42;
+                    letter-spacing: 0.12px;
+                    text-align: left;
+                    color: #26396c;
+                }
+            }
+            p {
+                .subText {
+                    font-family: $font-Light;
+                    font-size: 12px;
+                    font-weight: 300;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #444;
+                }
+                &.book-p-tag {
+                    font-family: $font-Medium;
+                    font-size: 13px;
+                    margin-top: 4px;
+                    font-weight: normal;
+                    margin-bottom: 0;
+
+                    &.right-align {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        a {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            img {
+                                transform: scale(-1) rotate(90deg);
+                            }
+                        }
+                        img {
+                            margin-right: 0;
+                            margin-left: 5px;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                    &:nth-child(3) {
+                        margin-bottom: 12px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+            img {
+                display: inline;
+                margin-right: 5px;
+                width: 14px;
+            }
+            button {
+                max-width: 359px;
+                width: 100%;
+                height: 38px;
+                // background-color: $bg-color-1;
+                font-family: $font-Book;
+                font-size: 14px;
+                color: white;
+                margin-top: 6px;
+                // .mainButton {
+                //     border-radius: 6px;
+                //     background-color: #fbb048;
+                // }
+                &.subButton {
+                    border-radius: 6px;
+                    background-color: #fbb048;
+                    &:last-child {
+                        border-radius: 6px;
+                        background-color: transparent;
+                        color: #333;
+                        border: solid 0.8px #fbb048;
+                    }
+                }
+                &:nth-child(2) {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}

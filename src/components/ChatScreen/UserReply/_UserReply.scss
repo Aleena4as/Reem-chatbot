@@ -1,0 +1,21 @@
+.user-reply-container {
+    position: relative;
+    text-align: right;
+    .user-reply {
+        display: inline-block;
+        background-color: #26396a;
+        color: white;
+        font-family: Lato-Regular;
+        border-radius: $container-radius;
+        padding: 16px;
+        margin-bottom: 33px;
+        font-size: 13px;
+        line-height: 17px;
+        text-align: left;
+    }
+    span {
+        @include position(absolute, bottom, 9px, right, 3px);
+        color: $time-color;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,108 @@
+@mixin transform($value) {
+    -webkit-transform: $value;
+    transform: $value;
+}
+
+.typing-indicator {
+    border-radius: 50px;
+    position: absolute;
+    bottom: 80px;
+    left: 25px;
+    @include media-width-max(456) {
+        bottom: 80px;
+    }
+    span {
+        height: 8px;
+        width: 8px;
+        float: left;
+        margin: 0 1px;
+        background-color: $btn-color-1;
+        display: block;
+        border-radius: 100%;
+        opacity: 0.7;
+        &:nth-child(1) {
+            -webkit-animation: animations 0.8s infinite;
+            animation: animations 0.8s infinite;
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+            @-webkit-keyframes animations {
+                0% {
+                    @include transform(translateY(0));
+                }
+                50% {
+                    @include transform(translateY(10px));
+                }
+                100% {
+                    @include transform(translateY(0));
+                }
+            }
+            @keyframes animations {
+                0% {
+                    @include transform(translateY(0));
+                }
+                50% {
+                    @include transform(translateY(10px));
+                }
+                100% {
+                    @include transform(translateY(0));
+                }
+            }
+        }
+        &:nth-child(2) {
+            -webkit-animation: animations 0.8s infinite;
+            animation: animations 0.8s infinite;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+            @-webkit-keyframes animations {
+                0% {
+                    @include transform(translateY(0));
+                }
+                50% {
+                    @include transform(translateY(10px));
+                }
+                100% {
+                    @include transform(translateY(0));
+                }
+            }
+            @keyframes animations {
+                0% {
+                    @include transform(translateY(0));
+                }
+                50% {
+                    @include transform(translateY(10px));
+                }
+                100% {
+                    @include transform(translateY(0));
+                }
+            }
+        }
+        &:nth-child(3) {
+            -webkit-animation: animations 0.8s infinite;
+            animation: animations 0.8s infinite;
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+            @-webkit-keyframes animations {
+                0% {
+                    @include transform(translateY(0));
+                }
+                50% {
+                    @include transform(translateY(10px));
+                }
+                100% {
+                    @include transform(translateY(0));
+                }
+            }
+            @keyframes animations {
+                0% {
+                    @include transform(translateY(0));
+                }
+                50% {
+                    @include transform(translateY(10px));
+                }
+                100% {
+                    @include transform(translateY(0));
+                }
+            }
+        }
+    }
+}

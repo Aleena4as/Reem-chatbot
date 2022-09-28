@@ -1,0 +1,217 @@
+.carousel-container {
+    margin: 0;
+    // height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 18px;
+    // padding-left: 15px;
+    // .slick-track {
+    //     display: flex;
+    //     .slick-slide {
+    //         height: inherit;
+    //         > div:nth-child(1) {
+    //             height: 100%;
+    //         }
+    //     }
+    // }
+    .figure {
+        // width: auto !important;
+        // width: 100% !important;
+        // height: 185px;
+        min-height: 56px;
+        height: auto;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: white;
+        margin-bottom: 8px;
+        position: relative;
+        cursor: pointer;
+        border: solid 1px $bg-color-4;
+        &.new_cars_offers {
+            min-height: 212px;
+            display: flex !important;
+            flex-direction: column;
+            // height: 100%;
+            .image {
+                margin-top: 0;
+                object-fit: cover;
+            }
+            .details {
+                width: 119px;
+                padding: 9px;
+                position: static;
+                transform: none;
+                text-align: right;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+                .column {
+                    padding: 0 5px;
+                    &.right-align {
+                        p {
+                            text-align: right;
+                        }
+                    }
+                }
+                p {
+                    white-space: break-spaces;
+                    text-align: left;
+                }
+                button {
+                    max-width: 359px;
+                    width: 100%;
+                    height: 38px;
+                    background-color: black;
+                    font-family: $font-Book;
+                    font-size: 14px;
+                    color: white;
+                    margin-top: 5px;
+                }
+            }
+        }
+        &:hover {
+            border: solid 1px #41689f;
+        }
+        &.disabled-button {
+            opacity: 1 !important;
+            cursor: not-allowed;
+            &:hover {
+                border: solid 1px #f4f5f5;
+            }
+        }
+        &.selected-button {
+            border: solid 1px #41689f;
+            cursor: not-allowed;
+        }
+        &.newClass {
+            margin-left: -12px;
+        }
+        .image {
+            width: 21px;
+            height: 21px;
+            object-fit: contain;
+        }
+        .full-image {
+            margin-top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .details {
+            width: 108px;
+            padding: 16px;
+            background-color: transparent;
+            color: $font-color-1;
+            text-align: center;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            // @include position(absolute, bottom, -8px, left, 50%);
+            @include position(absolute, bottom, 0, left, 50%);
+            letter-spacing: 0.32px;
+            &.details-used_cars_offers {
+                width: 125px;
+                text-align: left;
+                color: white;
+                padding: 9px;
+            }
+            h1 {
+                font-family: $font-Bold;
+                font-size: 13px;
+                text-transform: capitalize;
+            }
+            p {
+                font-family: $font-Regular;
+                font-size: 12px;
+                text-transform: capitalize;
+                margin-top: -4px;
+                margin-bottom: 2px;
+            }
+            .used-cars-class {
+                max-width: 359px;
+                width: 100%;
+                height: 38px;
+                background-color: white;
+                font-family: $font-Book;
+                font-size: 14px;
+                color: black;
+                margin-top: 5px;
+            }
+        }
+    }
+    .button-section {
+        margin-top: -15px;
+        text-align: right;
+        margin-right: -1px;
+        margin-bottom: 15px;
+        button {
+            background: #f4f4f6;
+            border-radius: 50%;
+            margin-right: 15px;
+            width: 45px;
+            height: 45px;
+            padding: 0px;
+            img {
+                width: 10px;
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+    .slick-slide {
+        margin-right: 8px;
+        padding: 2px !important;
+    }
+    .slick-track {
+        @include flex();
+        width: auto !important;
+    }
+    .slick-list {
+        padding-left: 22px;
+    }
+    .slick-dots {
+        text-align: left;
+        bottom: -7px;
+        display: flex !important;
+        left: 22px;
+        li {
+            margin-right: 12px;
+            button {
+                &::before {
+                    background-color: #c4c4c4 !important;
+                    font-size: 0;
+                    height: 3px;
+                    width: 30px;
+                }
+            }
+            &.slick-active {
+                button {
+                    &::before {
+                        // background-color: black !important;
+                    }
+                }
+            }
+        }
+    }
+    .detailsBox {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        padding: 0 17px;
+        height: 56px;
+        h1 {
+            padding-left: 14px;
+            font-family: 'Lato-Regular';
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.43;
+            letter-spacing: 0.14px;
+            text-align: left;
+            color: #354f94;
+        }
+    }
+}

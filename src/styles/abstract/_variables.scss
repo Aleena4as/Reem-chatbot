@@ -1,0 +1,60 @@
+// Font Family
+$Font-G-R: 'G-Regular';
+$font-Regular: 'Lato-Regular';
+$font-LightItalic: 'Lato-LightItalic';
+$font-RegularItalic: 'Lato-RegularItalic';
+$font-Light: 'Lato-Light';
+$font-Medium: 'Lato-Medium';
+$font-Semibold: 'Lato-SemiBold';
+$font-BlackItalic: 'Lato-BlackItalic';
+$font-Black: 'Lato-Black';
+$font-Bold: 'Lato-Bold';
+$font-BoldItalic: 'Lato-BoldItalic';
+$font-Book: 'Lato-Regular';
+$font-HelveticaNeueLight: 'HelveticaNeueLight';
+
+/* Font  */
+
+$font-color-1: #333333;
+$font-color-2: #333333;
+$font-color-3: #333333;
+$font-color-3: black;
+$time-color: #b9c0d0;
+$font-color-basic: #26396a;
+
+/* Button  */
+
+$btn-color-1: #26396a;
+$btn-color-2: #fcb13a;
+    
+/* background */
+
+$bg-color-1: #26396a;
+$bg-color-2: #4c5453;
+$bg-color-3: rgba(255, 255, 255, 0.3);
+$bg-color-4: white;
+$container-bg-color: #f4f5f5;
+$container-radius: 10px 10px 0 10px;
+
+/* Border */
+
+$border-radius-3: 3px;
+$border-radius-5: 5px;
+$border-radius-6: 6px;
+$border-radius-8: 8px;
+$border-radius-12: 12px;
+$br: 10px;
+$border-radius-container: $br $br 0 0;
+$border-bottom-left: $br $br $br 0;
+$border-bottom-right: $br $br $br 0;
+$border-top-right: $br 0 $br $br;
+$border-top-left: 0 $br $br $br;
+
+/* Box Shadow */
+
+$box-shadow-1: 0 3px 6px #efefef;
+
+/* Scroll */
+
+$scroll-background: #efefef;
+$buttonMoveTransition: 0.6s ease-in-out !important;
